@@ -68,8 +68,8 @@
 
 .unmount-phase {
   border: 1px solid transparent;
-  background-color: #f8d7da;
-  border-color: #f5c6cb;
+  background-color: #cce5ff;
+  border-color: #b8daff;
   position: relative;
   padding: 0.75rem 1.25rem;
   margin: 2rem;
@@ -78,8 +78,8 @@
 }
 .unmount-phase-child {
   border: 1px solid transparent;
-  background-color: #fff3cd;
-  border-color: #ffeeba;
+  background-color: #fefefe;
+  border-color: #fdfdfe;
   position: relative;
   padding: 0.75rem 1.25rem;
   margin: 2rem;

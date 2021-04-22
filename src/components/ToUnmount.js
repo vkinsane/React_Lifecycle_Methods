@@ -1,32 +1,41 @@
 import React from "react";
 class ToUnmount extends React.Component {
   componentDidMount() {
-    const startTime = new Date();
-    console.log("Storing Check-in(Mounting) time... ⌚ ");
+    // const startTime = new Date();
+
+    //Storing login time
+    // console.log("Storing Login_Time (Mounting) time... ⌚ ");
+    // localStorage.setItem("Login_Time", startTime);
+
     console.log("Component Mounted ✔️");
-    localStorage.setItem("Check_In_Time", startTime);
   }
 
+  // Unmounting phase componentWillUnmount method ----- [only method]
   componentWillUnmount() {
     const endTime = new Date();
+    //  Clearing local storage
     console.log("Clearing localstorage... 🧹");
-    localStorage.removeItem("Check_In_Time");
-    console.log("Storing Check-Out(Unmounting) time... ⌚ ");
-    localStorage.setItem("Check_Out_Time", endTime);
+    localStorage.removeItem("Login_Time");
+
+    //Storing logout time
+    console.log("Storing Logout_Time(Unmounting) time... ⌚ ");
+    localStorage.setItem("Logout_Time", endTime);
+
     console.log("Component Unmounted 🗑️");
   }
 
   render() {
     var lastCheckOutTime = new Date(
-      Date.parse(localStorage.getItem("Check_Out_Time"))
+      Date.parse(localStorage.getItem("Logout_Time"))
     );
-    lastCheckOutTime = lastCheckOutTime.toUTCString();
+    lastCheckOutTime = lastCheckOutTime.toString();
     return (
       <div className="unmount-phase-child border border-dark">
-        <h1>Sample Component</h1>
+        <h1>Component</h1>
         <h4>
-          You previously visited on : <br />
-          {lastCheckOutTime}
+          {/* Last online on : <br />
+          {lastCheckOutTime} */}
+          Online
         </h4>
       </div>
     );

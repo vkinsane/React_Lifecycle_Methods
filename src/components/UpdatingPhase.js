@@ -42,10 +42,8 @@ class UpdatingPhase extends Component {
   //   }
   //   //Check State change
   //   if (this.state !== nextState) {
-  //     console.log(
-  //       "State is Changed!, Component should display :",
-  //       nextState.device
-  //     );
+  //     console.log("State:", this.state, "is changed to:", nextState);
+  //     console.log("Component should display :", nextState.device);
   //     console.log(
   //       "But shouldComponentUpdate is returning false.So, not rendering again."
   //     );
@@ -57,28 +55,21 @@ class UpdatingPhase extends Component {
   //Updating phase getSnapshotBeforeUpdate method ----- [4]
   // getSnapshotBeforeUpdate(prevProps, prevState) {
   //   console.log("getSnapshotBeforeUpdate ⭐");
+  //   //check props change
   //   if (this.props !== prevProps) {
-  //     console.log(
-  //       "Update in Props:",
-  //       prevProps.device,
-  //       "is changed to:",
-  //       this.props.device
-  //     );
+  //     console.log("Props Changed!, Earlier Props was:", prevProps);
   //     return prevProps.device;
   //   }
+  //   //check state change
   //   if (this.state !== prevState) {
-  //     console.log(
-  //       "Update in State:",
-  //       prevState.device,
-  //       "is changed to:",
-  //       this.state.device
-  //     );
+  //     console.log("State Changed!, Earlier State was:", prevState);
   //     return prevState.device;
   //   }
   //   return null;
   // }
 
   //Updating phase componentDidUpdate method ----- [5]
+
   // componentDidUpdate(prevProps, prevState, snapshot) {
   //   console.log("componentDidUpdate ⭐");
   //   console.log(snapshot, "was changed");
@@ -86,9 +77,9 @@ class UpdatingPhase extends Component {
 
   //Updating phase render method ----- [3]
   render() {
+    console.log("Component Rendered ⭐");
     console.log("Props :", this.props);
     console.log("State :", this.state);
-    console.log("Component Rendered ⭐");
     return (
       <div className="update-phase-child">
         <h1>Updating Phase</h1>
