@@ -3,13 +3,12 @@ import React, { Component } from "react";
 class UpdatingPhase extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       device: this.props.device,
     };
   }
 
-  changedevice = () => {
+  changeDevice = () => {
     this.setState({
       device:
         this.state.device === "🖨️"
@@ -87,15 +86,14 @@ class UpdatingPhase extends Component {
 
   //Updating phase render method ----- [3]
   render() {
-    // console.log("Props :", this.props);
-    // console.log("State :", this.state);
+    console.log("Props :", this.props);
+    console.log("State :", this.state);
     console.log("Component Rendered ⭐");
     return (
       <div className="update-phase-child">
         <h1>Updating Phase</h1>
-        {/* <br /> */}
         <div style={{ fontSize: "5em" }}>{this.state.device}</div>
-        <button className="btn btn-outline-dark" onClick={this.changedevice}>
+        <button className="btn btn-outline-dark" onClick={this.changeDevice}>
           Change State
         </button>
       </div>
