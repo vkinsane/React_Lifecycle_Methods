@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-// import MountingPhase from "./components/MountingPhase";
+import MountingPhase from "./components/MountingPhase";
 // import UpdatingPhase from "./components/UpdatingPhase";
-import UnmountingPhase from "./components/UnmountingPhase";
-
-// import Hero from "./components/Hero";
-// import ErrorBoundary from "./components/ErrorBoundary";
+// import UnmountingPhase from "./components/UnmountingPhase";
 
 class App extends Component {
   state = {
@@ -29,7 +26,7 @@ class App extends Component {
     return (
       <div className="App">
         {/* ---------------Mounting Phase--------------- */}
-        {/* <MountingPhase/> */}
+        <MountingPhase />
 
         {/* ---------------Updating Phase--------------- */}
         {/* <div className="update-phase">
@@ -41,7 +38,7 @@ class App extends Component {
           <UpdatingPhase device={this.state.device} />
         </div> */}
         {/* ---------------Unmounting Phase--------------- */}
-        <UnmountingPhase />
+        {/* <UnmountingPhase /> */}
       </div>
     );
   }
