@@ -26,7 +26,7 @@ class App extends Component {
     return (
       <div className="App">
         {/* ---------------Mounting Phase--------------- */}
-        <MountingPhase />
+        {/* <MountingPhase /> */}
 
         {/* ---------------Updating Phase--------------- */}
         {/* <div className="update-phase">
